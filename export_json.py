@@ -72,7 +72,7 @@ for post, comments, negative_comments, positive_comments in final_query:
         "id": post.id,
         "body": post.body,
         "author_name": post.author_name,
-        "created_on": post.created_on.date(), # timestamp transformed in actual date
+        "created_on": str(post.created_on.date()), # timestamp transformed in actual date
         "comments": comments or 0,
         "positive_comments": positive_comments or 0,
         "negative_comments": negative_comments or 0
